@@ -34,8 +34,8 @@ export async function sendEmailAction(formData: FormData) {
 
     // 2. Send the email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // Update for production once you have a verified domain
-      to: ['delivered@resend.dev'], // Ensure you change this to your actual receiving email
+      from: `Contact Form <${process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'}>`,
+      to: [process.env.CONTACT_EMAIL || 'delivered@resend.dev'],
       subject: `New Message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       replyTo: email, // This allows you to hit "Reply" and email the user back directly
