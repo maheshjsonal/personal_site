@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Syntax highlighting */
+@import 'highlight.js/styles/github.css';
+@import 'highlight.js/styles/github-dark.css';
+
+:root {
+  /* Light theme colors */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --primary: #0070f3;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --accent: #f9fafb;
+  --accent-foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark theme colors */
+    --background: #111111;
+    --foreground: #f4f4f5;
+    --primary: #3b82f6;
+    --nav-bg: rgba(17, 17, 17, 0.9);
+    --border: #374151;
+    --muted: #9ca3af;
+    --muted-foreground: #6b7280;
+    --card: #1f2937;
+    --card-foreground: #f4f4f5;
+    --accent: #374151;
+    --accent-foreground: #f4f4f5;
+  }
+}
+
+[data-theme="dark"] {
+  /* Dark theme colors */
+  --background: #111111;
+  --foreground: #f4f4f5;
+  --primary: #3b82f6;
+  --nav-bg: rgba(17, 17, 17, 0.9);
+  --border: #374151;
+  --muted: #9ca3af;
+  --muted-foreground: #6b7280;
+  --card: #1f2937;
+  --card-foreground: #f4f4f5;
+  --accent: #374151;
+  --accent-foreground: #f4f4f5;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
